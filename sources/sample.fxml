@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Code">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Template" onAction="#clear"/>
+
+                        <MenuItem mnemonicParsing="false" text="Clear All" onAction="#clearAll"/>
+
+                        <MenuItem mnemonicParsing="false" text="File path" onAction="#copyFilePath"/>
+                    </items>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="Title" fx:id="title">
+                </Menu>
+
+            </menus>
+        </MenuBar>
+
+        <HBox>
+            <VBox>
+                <children>
+                    <TextArea fx:id="codeViewer" prefHeight="1000" prefWidth="1000" />
+                    <Label alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" text="fariz.mamedowtm@gmail.com (11 'A')" />
+                </children>
+            </VBox>
+            <WebView fx:id="webViewer" prefHeight="1000.0" prefWidth="1000.0" />
+        </HBox>
+
+    </children>
+</VBox>
